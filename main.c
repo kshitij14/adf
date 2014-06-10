@@ -16,6 +16,7 @@ int main()
     while(1)                                    //testing something
     {
       bitbang_initialise();
+//comment
     
       BITBANG_SLE_PxOUT &= ~BITBANG_SLE_BIT;
    

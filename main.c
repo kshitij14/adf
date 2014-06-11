@@ -16,7 +16,7 @@ int main()
     while(1)                                    //testing something
     {
       bitbang_initialise();
-//comment
+
     
       BITBANG_SLE_PxOUT &= ~BITBANG_SLE_BIT;
    
@@ -39,4 +39,8 @@ int main()
     while(1);
 	return 0;
 }
+
+
+//tried making some changed to my code, lets see if they show up.. call it the end of the day.
+//also removed a comment
 

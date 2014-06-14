@@ -12,12 +12,11 @@ unsigned long readback;
 int main()
 {
     WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
-<<<<<<< HEAD
+
     while(1)                                {
-=======
+
     while(1)                                   
     {
->>>>>>> de6360d2e83b7f4e38feb34cf0e0abf479aa5899
       bitbang_initialise();
 
     
@@ -33,12 +32,9 @@ int main()
     BITBANG_SLE_PxOUT &= ~BITBANG_SLE_BIT;
                    __delay_cycles(10);
     
-<<<<<<< HEAD
     readback = bitbang_read(16);                    
-=======
     readback = bitbang_read(16);                
     
->>>>>>> de6360d2e83b7f4e38feb34cf0e0abf479aa5899
     
     BITBANG_SLE_PxOUT &= ~BITBANG_SLE_BIT;
     bitbang_deinitialise();

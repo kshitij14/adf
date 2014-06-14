@@ -13,7 +13,7 @@ int main()
 {
     WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
 
-    while(1)                                {
+    
 
     while(1)                                   
     {

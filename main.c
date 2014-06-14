@@ -1,20 +1,18 @@
 /**
-author : c2
+author : kshitij
 date: 9th june 2014
 **/
 
 
-//it works, amen.
+
 #include "bb.h"
 
 
-unsigned long readback;                //*change1
-
+unsigned long readback;                
 int main()
 {
     WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
-    while(1)                                    //testing something
-    {
+    while(1)                                {
       bitbang_initialise();
 
     
@@ -30,15 +28,13 @@ int main()
     BITBANG_SLE_PxOUT &= ~BITBANG_SLE_BIT;
                    __delay_cycles(10);
     
-    readback = bitbang_read(16);                //even though one bit is being thrown out, 18 bits for safty
-    
+    readback = bitbang_read(16);                    
     
     BITBANG_SLE_PxOUT &= ~BITBANG_SLE_BIT;
     bitbang_deinitialise();
     }
     while(1);
 	return 0;
-//are changed that are made online reflected? i wonder
 
 }
 

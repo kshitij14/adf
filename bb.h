@@ -7,10 +7,14 @@
 //pin definations
 
 #define BITBANG_CE_PxDIR       P1DIR  //P4DIR                     
+<<<<<<< HEAD
 #define BITBANG_CE_PxOUT   P1OUT//P4OUT                 
+=======
+#define BITBANG_CE_PxOUT   P1OUT//P4OUT                     
+>>>>>>> de6360d2e83b7f4e38feb34cf0e0abf479aa5899
 #define BITBANG_CE_BIT     BIT1//BIT5                     
 
-#define BITBANG_SREAD_PxDIR  P1DIR  //P1DIR               //Port10. pin 2
+#define BITBANG_SREAD_PxDIR  P1DIR  //P1DIR             
 #define BITBANG_SREAD_PxOUT  P1OUT//P1OUT
 #define BITBANG_SREAD_BIT    BIT4//BIT7                       
 #define BITBANG_SREAD_PxIN  P1IN
@@ -18,6 +22,7 @@
 
 #define BITBANG_SLE_PxDIR   P1DIR//P5DIR                
 #define BITBANG_SLE_PxOUT   P1OUT//P5OUT                
+<<<<<<< HEAD
 #define BITBANG_SLE_BIT     BIT2//BIT5                    
 
 #define BITBANG_SDATA_PxDIR  P1DIR//P4DIR                   
@@ -27,6 +32,17 @@
 
 #define BITBANG_SCLK_PxDIR   P1DIR//P4DIR                   
 #define BITBANG_SCLK_PxOUT   P1OUT//P4OUT                   
+=======
+#define BITBANG_SLE_BIT     BIT2//BIT5                  
+
+#define BITBANG_SDATA_PxDIR  P1DIR//P4DIR               
+#define BITBANG_SDATA_PxOUT  P1OUT//P4OUT               
+#define BITBANG_SDATA_BIT    BIT0//BIT0                 
+#define BITBANG_SDATA_PxREN  P1REN                      
+
+#define BITBANG_SCLK_PxDIR   P1DIR//P4DIR               
+#define BITBANG_SCLK_PxOUT   P1OUT//P4OUT               
+>>>>>>> de6360d2e83b7f4e38feb34cf0e0abf479aa5899
 #define BITBANG_SCLK_BIT     BIT3//BIT3                   
 
 

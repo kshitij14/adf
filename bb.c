@@ -7,14 +7,21 @@ void bitbang_initialise()
     BITBANG_SCLK_PxDIR |= BITBANG_SCLK_BIT;
     BITBANG_SDATA_PxDIR |= BITBANG_SDATA_BIT;
     BITBANG_SREAD_PxDIR &= ~BITBANG_SREAD_BIT;
-    BITBANG_SREAD_PxREN |= BITBANG_SREAD_BIT;                   //PULL UP/DOWN ENABLED*
+    BITBANG_SREAD_PxREN |= BITBANG_SREAD_BIT;                   //PULL UP/DOWN ENABLED
     
     BITBANG_CE_PxOUT |= BITBANG_CE_BIT;
+<<<<<<< HEAD
     __delay_cycles(100000);           
     BITBANG_SLE_PxOUT &= ~BITBANG_SLE_BIT;
     BITBANG_SCLK_PxOUT &= ~BITBANG_SCLK_BIT;
   
     BITBANG_SDATA_PxOUT &= ~ BITBANG_SDATA_BIT;
+=======
+    __delay_cycles(100000);            
+    BITBANG_SLE_PxOUT &= ~BITBANG_SLE_BIT;
+    BITBANG_SCLK_PxOUT &= ~BITBANG_SCLK_BIT;
+     BITBANG_SDATA_PxOUT &= ~ BITBANG_SDATA_BIT;
+>>>>>>> de6360d2e83b7f4e38feb34cf0e0abf479aa5899
     
 }
 
@@ -39,7 +46,11 @@ void bitbang_write(unsigned char data)
     else
  { BITBANG_SDATA_PxOUT &= ~BITBANG_SDATA_BIT; }
  
+<<<<<<< HEAD
     BITBANG_SCLK_PxOUT |= BITBANG_SCLK_BIT;             
+=======
+    BITBANG_SCLK_PxOUT |= BITBANG_SCLK_BIT;  
+>>>>>>> de6360d2e83b7f4e38feb34cf0e0abf479aa5899
    __delay_cycles(100);
     BITBANG_SCLK_PxOUT &= ~BITBANG_SCLK_BIT;
     __delay_cycles(100);
@@ -69,8 +80,8 @@ long bitbang_read(unsigned char bitsize)
         for(i = 0; i < bitsize; i++)
 	{        
           value = value<<1;
-		//BITBANG_SCLK_PxOUT &= ~BITBANG_SCLK_BIT;                //try low to high transition too
-		       __delay_cycles(50);
+		
+				       __delay_cycles(50);
  
                 BITBANG_SCLK_PxOUT |= BITBANG_SCLK_BIT;
                        __delay_cycles(50);
@@ -84,11 +95,20 @@ long bitbang_read(unsigned char bitsize)
                  
                 
                
+<<<<<<< HEAD
+=======
+	}
+        
+>>>>>>> de6360d2e83b7f4e38feb34cf0e0abf479aa5899
 	BITBANG_SCLK_PxOUT &= ~BITBANG_SCLK_BIT;
        
         
         
+<<<<<<< HEAD
          /* throw away last bit */
+=======
+         // throw away last bit 
+>>>>>>> de6360d2e83b7f4e38feb34cf0e0abf479aa5899
         BITBANG_SCLK_PxOUT |= BITBANG_SCLK_BIT;                 
         BITBANG_SCLK_PxOUT &= ~BITBANG_SCLK_BIT;
 	BITBANG_SLE_PxOUT &= ~BITBANG_SLE_BIT;
